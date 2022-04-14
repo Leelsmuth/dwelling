@@ -1,38 +1,132 @@
-.App {
+.app {
+  background: linear-gradient(180deg, rgba(249, 245, 242, 0) 0%, #faf3ee 100%);
+  min-height: 100vh;
+}
+.app-screen {
+  max-width: 375px;
+  margin: auto;
+  padding: 19px 15px;
+}
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 5px;
+}
+.app-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+.app-header img {
+  max-width: 100%;
+}
+.app-form--instruction p {
+  margin: 0;
+}
+.app-form--box {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+.app-form--box > * {
+  padding: 13px 15px;
+}
+/* .app-form--box > *:not(:last-child) {
+  border-bottom: 1px solid #000000;
+} */
+.app-form--box > *:last-child {
+  border-radius: 0 0 10px 10px;
+}
+.app-form--box .app-form--input {
+  padding: 0;
+  position: relative;
+}
+.form-control {
+  border: none;
+  border-radius: inherit;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  font-size: 14px;
+  width: 100%;
+  padding: 5px 0;
+  padding: 13px 15px;
+  letter-spacing: 2px;
+}
+.app-form--input:last-child .form-control {
+  border-bottom: none;
+}
+.form-control::placeholder {
+  color: rgba(62, 52, 43, 0.5);
+}
+.form-control:focus {
+  border-top-color: #1e7500;
+  border-bottom-color: #1e7500;
+}
+.form-control.form-error {
+  border-top-color: #ff4d00;
+  border-bottom-color: #ff4d00;
+}
+.form-control:focus-visible {
+  outline: none;
+}
+.app-form--input .button--reset {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 18px;
+  top: 13px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.app-form-message {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #eeebe8;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-form-message.app-form-balance {
+  color: #1e7500;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-form-message.app-form-error {
+  color: #ff4d00;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-form--instruction {
+  background-color: #efe6dd;
+  padding: 20px 15px 15px;
+  border-radius: 10px 10px 0 0;
 }
-
-.App-link {
-  color: #61dafb;
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  width: 100%;
+  padding: 15px 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button.button--submit {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+.button.button--submit:hover,
+.button.button--submit:focus {
+  background-color: #ffffff;
+  color: #000000;
+}
+.button.button--reset {
+  background-color: #f06a6a;
+  border-color: #ff0000;
+  color: #000000;
+}
+.button.button--reset:hover,
+.button.button--reset:focus {
+  background-color: #ffffff;
 }
